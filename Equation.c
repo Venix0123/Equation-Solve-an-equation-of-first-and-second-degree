@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-///////////// declaration of Procedures /////////
+///////////// Declaration of Procedures and Global Variables /////////
 void Operation1(); 
 void Operation2();
+int choix;
 
 int main(int argc, char *argv[]) {
 	
@@ -11,8 +12,6 @@ int main(int argc, char *argv[]) {
 ////////////// Function of choice ///////////////
 	int choice(){
 	
-	
-	int choix;
 	printf("\n Quelle Operation Mathematique Vous Voulez ? Entrez votre choix :");
 	printf("\n\n 1. ax+b \n 2. ax+bx+c=0 \n 3. Quitter \n\n => : ");
 	scanf("%d",&choix);
@@ -22,7 +21,7 @@ int main(int argc, char *argv[]) {
 /////////////// Function of loop	////////////////////////
 	int loop ()
 {
-	int i,choix;
+
 while ( choix != 1 && choix != 2 && choix != 3 )
 	{ 
 	printf("\n Choix Introuvable , essayez-vous un autre :");
@@ -34,17 +33,17 @@ while ( choix != 1 && choix != 2 && choix != 3 )
 }
 ///////// Appel /////////////	
 	     
-int choix=choice();// declaration dyal variable jdida choix katrj3 lina l9ima d choix li f choice();
-int nonchoix=loop();// declaration dyal variable jdida choix katrj3 lina l9ima d choix li f loop();
-/*
- while ( loop() != 1 && loop() != 2)
+choice(); // Choice function
+
+ while ( loop() != 1 && loop() != 2 && loop() != 3)
  {
  	loop();
- }*/
-if ( choix == 1 || nonchoix == 1)
+ }
+ 
+if ( choix == 1 )
 {Operation1();}
 
-else if ( choix == 2 || nonchoix == 2)
+else if ( choix == 2 )
 {Operation2();}
 else printf("\n Au revoir !");exit(0);
                 
